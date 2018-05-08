@@ -1,0 +1,27 @@
+Step 1: Securely collecting payment information
+
+1. you must also specify an amount when making a charge request.
+
+
+¹ØÓÚform£º
+checkout »ò stripe.js
+
+
+
+
+Step 2: Creating a charge to complete the payment 
+
+1. Once a token is created, your server-side code makes an API request to create a one-time charge.  
+   This request contains the token, currency, amount to charge, and any additional information you may want to pass
+
+// Token is created using Checkout or Elements!
+// Get the payment token ID submitted by the form: 
+
+These requests expect the ID of the Token (e.g., tok_KPte7942xySKBKyrBu11yEpf) to be provided as the value of 
+the source parameter.?????
+
+On your server, grab the Stripe token in the POST parameters submitted by your form. 
+//String token = request.getParameter("stripeToken");
+//params.put("source", token);
+//Charge charge = Charge.create(params);
+
